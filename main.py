@@ -29,3 +29,9 @@ ctypes.windll.kernel32.SetConsoleTitleW(title + " v" + str(CurrentVersion))
 
 # Main Script --
 
+print("=====================")
+print("=                   =")
+print("=      Welcome      =") 
+print("=                   =")
+print("=====================")
+
