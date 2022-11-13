@@ -13,7 +13,7 @@ import os
 ###### Path #######
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"E:\DATA_02\GitHub_Repo\Launch\assets")
+ASSETS_PATH = OUTPUT_PATH / Path(r"E:\DATA_02\GitHub_Repo\Launch\assets\frame0")
 
 ##############################
 
