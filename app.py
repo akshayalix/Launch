@@ -20,5 +20,7 @@ ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\aksha\Desktop\build\assets\frame0")
 
 # Main Program --
 
+def relative_to_assets(path: str) -> Path:
+    return ASSETS_PATH / Path(path)
 
 #-----------------------------------
