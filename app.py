@@ -5,7 +5,7 @@
 from pathlib import Path
 
 # Explict imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import os
 
 #---------------------
@@ -44,6 +44,26 @@ if os.path.isfile('config.txt'):
         tempApps = f.read()
         tempApps = tempApps.split(',')
         apps = [x for x in tempApps if x.strip()]      # Check Config File as the app starts.
+
+# Button def --
+
+def addApp():
+
+    for widget in frame.winfo_children():
+        widget.destroy()
+
+    filename = filedialog.askopenfilename(initialdir="/", title="Select File", 
+    filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
+    apps.append(filename)
+    for app in apps:
+        lable = tk.Label(frame, text=app)
+        lable.pack()
+
+def run_apps():
+    for app in apps:
+        os.startfile(app)
+
+# -------------------------
 
 
 canvas = Canvas(
