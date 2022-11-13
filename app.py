@@ -60,8 +60,8 @@ def addApp():
     filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
     apps.append(filename)
     for app in apps:
-        lable = tk.Label(frame, text=app)
-        lable.pack()
+        lable = tk.Label(frame, text=app, background=None)
+        lable.pack(padx=None, pady=None)
 
 def run_apps():
     for app in apps:
@@ -155,11 +155,11 @@ image_3 = canvas.create_image(
 )
 
 frame = tk.Frame(window)
-frame.place(anchor="center", relx=0.342, rely=0.564,)
+frame.place(anchor="center", relx=0.342, rely=0.564)
 
 img = ImageTk.PhotoImage(Image.open(r"E:\DATA_02\GitHub_Repo\Launch\assets\frame0\image_1.png"))
 
-label = tk.Label(frame, image = img, borderwidth=0)
+label = tk.Label(frame, image= img, borderwidth=0)
 label.pack()
 
 window.bind('<Button-1>', keep_flat)
@@ -168,5 +168,9 @@ window.resizable(False, False)
 window.mainloop()
 
 ############################################
+
+with open('config.txt', 'w') as f:
+    for app in apps:
+        f.write(app + ',')
 
 #-----------------------------------
