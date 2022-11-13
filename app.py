@@ -38,7 +38,7 @@ def keep_flat(event):
 window = Tk()
 
 window.geometry("800x500")
-window.configure(bg = "#2C2C2C")
+window.configure(bg = "#2D2D2D")
 
 apps = []
 
@@ -60,8 +60,8 @@ def addApp():
     filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
     apps.append(filename)
     for app in apps:
-        lable = tk.Label(frame, text=app, background=None)
-        lable.pack(padx=None, pady=None)
+        lable = tk.Label(frame, text=app)
+        lable.pack()
 
 def run_apps():
     for app in apps:
@@ -104,7 +104,7 @@ button_2 = Button(
     borderwidth=0,
     highlightthickness=0,
     highlightcolor="#2D2D2D",
-    command=lambda: print("button_2 clicked"),
+    command=run_apps,
     relief="flat"
 )
 button_2.place(
@@ -163,6 +163,10 @@ label = tk.Label(frame, image= img, borderwidth=0)
 label.pack()
 
 window.bind('<Button-1>', keep_flat)
+
+for app in apps:
+    lable = tk.Label(frame, text=app)
+    lable.pack()
 
 window.resizable(False, False)
 window.mainloop()
