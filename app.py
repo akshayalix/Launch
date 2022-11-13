@@ -49,14 +49,14 @@ if os.path.isfile('config.txt'):
 
 def addApp():
 
-    for widget in frame.winfo_children():
+    for widget in image_1.winfo_children():
         widget.destroy()
 
     filename = filedialog.askopenfilename(initialdir="/", title="Select File", 
     filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
     apps.append(filename)
     for app in apps:
-        lable = tk.Label(frame, text=app)
+        lable = Tk.Label(image_1, text=app)
         lable.pack()
 
 def run_apps():
