@@ -39,6 +39,13 @@ window.geometry("800x500")
 window.configure(bg = "#2C2C2C")
 
 
+if os.path.isfile('config.txt'):
+    with open('config.txt', 'r') as f:
+        tempApps = f.read()
+        tempApps = tempApps.split(',')
+        apps = [x for x in tempApps if x.strip()]      # Check Config File as the app starts.
+
+
 canvas = Canvas(
     window,
     bg = "#2C2C2C",
