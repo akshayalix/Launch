@@ -83,7 +83,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=addApp,
     relief="flat"
 )
 button_1.place(
@@ -116,7 +116,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=window.destroy,
     relief="flat"
 )
 button_3.place(
