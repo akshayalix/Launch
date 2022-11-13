@@ -5,8 +5,10 @@
 from pathlib import Path
 
 # Explict imports to satisfy Flake8
+import tkinter as tk
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import os
+from PIL import ImageTk, Image
 
 #---------------------
 
@@ -49,14 +51,14 @@ if os.path.isfile('config.txt'):
 
 def addApp():
 
-    for widget in image_1.winfo_children():
+    for widget in image_image_1.winfo_children():
         widget.destroy()
 
     filename = filedialog.askopenfilename(initialdir="/", title="Select File", 
     filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
     apps.append(filename)
     for app in apps:
-        lable = Tk.Label(image_1, text=app)
+        lable = Tk.Label(image_image_1, text=app)
         lable.pack()
 
 def run_apps():
@@ -149,6 +151,14 @@ image_3 = canvas.create_image(
     91.0,
     image=image_image_3
 )
+
+frame = tk.Frame(window)
+frame.place(anchor="center", relx=0.342, rely=0.564,)
+
+img = ImageTk.PhotoImage(Image.open(r"E:\DATA_02\GitHub_Repo\Launch\assets\frame0\image_1.png"))
+
+label = tk.Label(frame, image = img, borderwidth=0)
+label.pack()
 
 window.bind('<Button-1>', keep_flat)
 
