@@ -40,6 +40,8 @@ window = Tk()
 window.geometry("800x500")
 window.configure(bg = "#2C2C2C")
 
+apps = []
+
 
 if os.path.isfile('config.txt'):
     with open('config.txt', 'r') as f:
@@ -51,14 +53,14 @@ if os.path.isfile('config.txt'):
 
 def addApp():
 
-    for widget in image_image_1.winfo_children():
+    for widget in frame.winfo_children():
         widget.destroy()
 
     filename = filedialog.askopenfilename(initialdir="/", title="Select File", 
     filetypes=(("Executables", "*.exe"), ("All Files", "*.*")))
     apps.append(filename)
     for app in apps:
-        lable = Tk.Label(image_image_1, text=app)
+        lable = tk.Label(frame, text=app)
         lable.pack()
 
 def run_apps():
