@@ -24,6 +24,9 @@ def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
 
+def keep_flat(event):      
+    if event.widget is button_1 or button_2 or button_3: 
+        event.widget.config(relief="flat") 
 
 
 
