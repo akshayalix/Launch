@@ -159,7 +159,7 @@ frame.place(anchor="center", relx=0.342, rely=0.564)
 
 img = ImageTk.PhotoImage(Image.open(r"E:\DATA_02\GitHub_Repo\Launch\assets\frame0\image_1.png"))
 
-label = tk.Label(frame, image= img, borderwidth=0)
+label = tk.Label(frame, borderwidth=0)
 label.pack()
 
 window.bind('<Button-1>', keep_flat)
