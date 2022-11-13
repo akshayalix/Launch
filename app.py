@@ -2,16 +2,23 @@
 
 # Import librares --
 
-import tkinter as tk
-from tkinter import filedialog, Text, ttk
+from pathlib import Path
+
+# Explict imports to satisfy Flake8
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 import os
 
 #---------------------
 
+###### Path #######
+
+OUTPUT_PATH = Path(__file__).parent
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\aksha\Desktop\build\assets\frame0")
+
+##############################
+
+
 # Main Program --
 
-root = tk.Tk()
-
-root.mainloop()
 
 #-----------------------------------
