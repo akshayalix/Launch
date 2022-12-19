@@ -24,3 +24,15 @@ def power():
     os.startfile(toys)
 
     # For PowerToys.
+
+#________________
+
+# Main
+
+sleep(float(5))
+
+rapoo()
+mica()
+power()
+
+#________________
